@@ -2,16 +2,15 @@
 package main
 
 import (
-	"os"
-	"io/ioutil"
 	"encoding/json"
+	"io/ioutil"
+	"os"
 )
 
 type Config struct {
-	ListenPort string `json:"listen_port"`
-	NotFoundDoc string `json:"not_found_doc"`
+	ListenPort  string `json:"listen_port"`
 	UploadDoc string `json:"upload_doc"`
-	UploadPath string `json:"upload_path"`
+	UploadPath  string `json:"upload_path"`
 }
 
 func NewConfig(path string) (*Config, error) {
